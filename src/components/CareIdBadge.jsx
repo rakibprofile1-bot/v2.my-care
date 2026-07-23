@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { CreditCard, CheckCircle2, Copy } from "lucide-react";
-import { useCurrentUser } from "../contexts/currentusercontext";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
 import { GREEN } from "../constants/colors";
-import { CARE_ID } from "../constants/caredirectory";
+import { CARE_ID } from "../constants/careDirectory";
 
 export default function CareIdBadge({ compact }) {
   const currentUser = useCurrentUser();

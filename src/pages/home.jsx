@@ -1,14 +1,14 @@
 import React from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { Menu, Search, Bell, ChevronRight, Plus, Star, Info, Trophy, ArrowRight } from "lucide-react";
-import { useCurrentUser } from "../contexts/currentusercontext";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
 import { GREEN } from "../constants/colors";
 import { services, quickActions, activity } from "../constants/home";
 import { SERVICE_ROUTES } from "../constants/routes";
-import CareLogo from "../components/carelogo";
-import CareIdBadge from "../components/careIdbadge";
-import ServiceCard from "../components/servicecard";
-import QuickAction from "../components/quickaction";
+import CareLogo from "../components/CareLogo";
+import CareIdBadge from "../components/CareIdBadge";
+import ServiceCard from "../components/ServiceCard";
+import QuickAction from "../components/QuickAction";
 
 export default function HomePage() {
   const { onOpenMenu } = useOutletContext();

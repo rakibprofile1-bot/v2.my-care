@@ -7,7 +7,7 @@ import { db } from "../../../firebase/firestore";
 import { Banknote } from "lucide-react";
 import { GREEN } from "../../../constants/colors";
 import { getInitialsFrom } from "../../../utils/helpers";
-import SectionTitle from "../../../components/sectiontitle";
+import SectionTitle from "../../../components/SectionTitle";
 
 export default function Rent() {
   const { hostelId, students, hostelInfo, updateStudentField } = useOutletContext();

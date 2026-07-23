@@ -1,5 +1,5 @@
 import { signOut } from "firebase/auth";
-import { auth } from "./firebaseconfig";
+import { auth } from "./firebaseConfig";
 
 export { auth };
 

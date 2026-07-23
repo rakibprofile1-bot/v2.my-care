@@ -9,11 +9,11 @@ import {
 import { GREEN, GREEN_DARK } from "../../../constants/colors";
 import { getInitialsFrom, todayKey } from "../../../utils/helpers";
 import { MEAL_TYPES } from "../../../constants/meals";
-import PendingRequestCard from "../../../components/pendingrequestcard";
-import SectionTitle from "../../../components/sectiontitle";
+import PendingRequestCard from "../../../components/PendingRequestCard";
+import SectionTitle from "../../../components/SectionTitle";
 import {
   studentTopStats, studentMeals, studentMenu, studentNotices,
-} from "../../../constants/hosteldata";
+} from "../../../constants/hostelData";
 
 export default function StudentDashboard({ currentUser, hostelId, hostelInfo, onAccepted }) {
   const [pendingRequests, setPendingRequests] = useState([]);

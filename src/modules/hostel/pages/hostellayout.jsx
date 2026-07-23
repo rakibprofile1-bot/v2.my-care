@@ -7,10 +7,10 @@ import { db } from "../../../firebase/firestore";
 import {
   ArrowLeft, ArrowLeftRight, BedDouble, Bell, ChevronRight, Menu, UserCog, GraduationCap,
 } from "lucide-react";
-import { useCurrentUser } from "../../../contexts/currentusercontext";
+import { useCurrentUser } from "../../../contexts/CurrentUserContext";
 import { GREEN } from "../../../constants/colors";
-import CareIdBadge from "../../../components/careIdbadge";
-import { managerTabs, studentTabs } from "../../../constants/hosteldata";
+import CareIdBadge from "../../../components/CareIdBadge";
+import { managerTabs, studentTabs } from "../../../constants/hostelData";
 
 const TAB_ROUTES = {
   dashboard: "/hostel",

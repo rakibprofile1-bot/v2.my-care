@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
-import { Home as HomeIcon, Search, Bell, Plus, User } from "lucide-react";
+import { Home as HomeIcon, Search, Bell, Plus, User, Briefcase } from "lucide-react";
 import { GREEN, GREEN_DARK } from "./constants/colors";
-import MenuDrawer from "./components/menudrawer";
+import MenuDrawer from "./components/MenuDrawer";
 
 export default function AppLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,6 +11,7 @@ export default function AppLayout() {
 
   const isHome = location.pathname === "/";
   const isProfile = location.pathname === "/profile";
+  const isCareer = location.pathname.startsWith("/career");
 
   return (
     <div style={{
@@ -32,9 +33,10 @@ export default function AppLayout() {
           <HomeIcon size={20} color={isHome ? GREEN : "#9a9c95"} />
           <span style={{ fontSize: 10.5, color: isHome ? GREEN : "#9a9c95", fontWeight: 600 }}>Home</span>
         </button>
-        <button style={{ background: "none", border: "none", display: "flex", flexDirection: "column", alignItems: "center", gap: 3, cursor: "pointer" }}>
-          <Search size={20} color="#9a9c95" />
-          <span style={{ fontSize: 10.5, color: "#9a9c95", fontWeight: 600 }}>Search</span>
+        <button onClick={() => navigate("/career")}
+          style={{ background: "none", border: "none", display: "flex", flexDirection: "column", alignItems: "center", gap: 3, cursor: "pointer" }}>
+          <Briefcase size={20} color={isCareer ? GREEN : "#9a9c95"} />
+          <span style={{ fontSize: 10.5, color: isCareer ? GREEN : "#9a9c95", fontWeight: 600 }}>Career</span>
         </button>
         <button onClick={() => navigate("/")} style={{
           width: 48, height: 48, borderRadius: "50%", background: GREEN_DARK, border: "none",
@@ -42,6 +44,10 @@ export default function AppLayout() {
           boxShadow: "0 4px 10px rgba(31,138,90,0.35)", cursor: "pointer"
         }}>
           <Plus size={22} color="#fff" />
+        </button>
+        <button style={{ background: "none", border: "none", display: "flex", flexDirection: "column", alignItems: "center", gap: 3, cursor: "pointer" }}>
+          <Search size={20} color="#9a9c95" />
+          <span style={{ fontSize: 10.5, color: "#9a9c95", fontWeight: 600 }}>Search</span>
         </button>
         <button style={{ background: "none", border: "none", display: "flex", flexDirection: "column", alignItems: "center", gap: 3, cursor: "pointer", position: "relative" }}>
           <Bell size={20} color="#9a9c95" />

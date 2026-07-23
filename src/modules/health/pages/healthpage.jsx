@@ -8,8 +8,8 @@ import {
   LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid,
 } from "recharts";
 import { GREEN } from "../../../constants/colors";
-import CareLogo from "../../../components/carelogo";
-import CareIdBadge from "../../../components/careIdbadge";
+import CareLogo from "../../../components/CareLogo";
+import CareIdBadge from "../../../components/CareIdBadge";
 
 const vitals = [
   { key: "hr", name: "Heart Rate", value: "72", unit: "bpm", status: "Normal", icon: HeartPulse, bg: "#FCE9EB", fg: "#E0435A" },

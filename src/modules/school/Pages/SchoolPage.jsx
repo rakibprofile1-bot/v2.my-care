@@ -7,10 +7,10 @@ import {
   Coins, Truck, BedDouble, ClipboardCheck, Smile, Home as HomeIcon, User, UserPlus,
 } from "lucide-react";
 import { GREEN } from "../../../constants/colors";
-import CareIdBadge from "../../../components/careIdbadge";
-import ConnectByCareId from "../../../components/connectbycareid";
-import PendingRequestCard from "../../../components/pendingrequestcard";
-import SectionTitle from "../../../components/sectiontitle";
+import CareIdBadge from "../../../components/CareIdBadge";
+import ConnectByCareId from "../../../components/ConnectByCareId";
+import PendingRequestCard from "../../../components/PendingRequestCard";
+import SectionTitle from "../../../components/SectionTitle";
 
 const schStudentClasses = [
   { key: "eng", time: "08:00 AM", name: "English", room: "Room 101", icon: BookOpen, fg: "#6E4FD1" },

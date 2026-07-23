@@ -1,3 +1,3 @@
-import { db } from "./firebaseconfig";
+import { db } from "./firebaseConfig";
 
 export { db };
