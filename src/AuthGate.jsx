@@ -6,26 +6,14 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { doc, setDoc, getDoc, serverTimestamp } from "firebase/firestore";
-import { auth, db } from "./firebaseConfig";
-import { CurrentUserContext } from "./CurrentUserContext";
+import { auth } from "./firebase/auth";
+import { db } from "./firebase/firestore";
+import { CurrentUserContext } from "./contexts/CurrentUserContext";
+import { getInitialsFrom } from "./utils/helpers";
+import { generateCareId } from "./utils/generateCareId";
 
 const GREEN = "#1F8A5A";
 const GREEN_DARK = "#166B45";
-
-function getInitials(name) {
-  return name
-    .trim()
-    .split(/\s+/)
-    .map((w) => w[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
-}
-
-function generateCareId(name) {
-  const digits = Math.floor(10000 + Math.random() * 90000);
-  return `CARE-${digits}-${getInitials(name)}`;
-}
 
 function AuthForm({ mode, onSwitchMode }) {
   const [name, setName] = useState("");
@@ -144,7 +132,7 @@ export default function AuthGate({ children }) {
           name,
           email: data.email || fbUser.email,
           careId: data.careId || "CARE-00000-NA",
-          initials: getInitials(name),
+          initials: getInitialsFrom(name),
         });
         setStatus("signedIn");
       } catch (err) {

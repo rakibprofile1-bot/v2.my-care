@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import MyCareApp from "./MyCareApp.jsx";
+import { HashRouter } from "react-router-dom";
+import App from "./App.jsx";
 import AuthGate from "./AuthGate.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthGate>
-      <MyCareApp />
-    </AuthGate>
+    <HashRouter>
+      <AuthGate>
+        <App />
+      </AuthGate>
+    </HashRouter>
   </React.StrictMode>
 );
