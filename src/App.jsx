@@ -10,7 +10,7 @@ import FinancePage from "./modules/finance/pages/FinancePage";
 import PrayerPage from "./modules/prayer/pages/PrayerPage";
 import SchoolPage from "./modules/school/pages/SchoolPage";
 import CareerPage from "./modules/career/pages/CareerPage";
-import DailyTaskPage from "./modules/dailytask/pages/DailyTaskPage";
+import DailyTaskPage from "./modules/daily-task/pages/dailytaskpage";
 import HostelLayout from "./modules/hostel/pages/HostelLayout";
 import HostelDashboard from "./modules/hostel/pages/Dashboard";
 import HostelStudents from "./modules/hostel/pages/Students";
