@@ -1,16 +1,20 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import AppLayout from "./appLayout";
+
+import AppLayout from "./applayout";
+
 import HomePage from "./pages/home";
 import ProfilePage from "./pages/profile";
-import HealthPage from "./modules/health/pages/healthPage";
-import FamilyPage from "./modules/family/pages/FamilyPage";
-import TravelPage from "./pages/travelpage";
-import FinancePage from "./modules/finance/pages/FinancePage";
+
+import HealthPage from "./modules/health/pages/healthpage";
+import FamilyPage from "./modules/family/pages/familypage";
+import TravelPage from "./modules/travel/pages/travelpage";
+import FinancePage from "./modules/finance/pages/financepage";
 import PrayerPage from "./modules/prayer/pages/prayerpage";
-import SchoolPage from "./modules/school/pages/SchoolPage";
-import DailyTaskPage from "./modules/dailyTask/pages/dailyTaskPage";
-import HostelLayout from "./modules/hostel/pages/hostelLayout";
+import SchoolPage from "./modules/school/pages/schoolpage";
+import DailyTaskPage from "./modules/dailytask/pages/dailytaskpage";
+
+import HostelLayout from "./modules/hostel/pages/hostellayout";
 import HostelDashboard from "./modules/hostel/pages/dashboard";
 import HostelStudents from "./modules/hostel/pages/students";
 import HostelMeals from "./modules/hostel/pages/meals";
